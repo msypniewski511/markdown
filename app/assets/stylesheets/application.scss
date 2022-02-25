@@ -38,7 +38,13 @@
 .discussion-title {
   margin-bottom: 0;
 }
-
-
+.pt{
+  &-1 {
+    margin-top: 1rem;
+  }
+}
+.pt-5 {
+   margin-top: 5rem;
+}
 
 
