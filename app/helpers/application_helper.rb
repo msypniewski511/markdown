@@ -18,7 +18,8 @@ module ApplicationHelper
       no_intra_emphasis: true,
       autolink: true,
       lax_html_blocks: true,
-      lax_spacing: true
+      lax_spacing: true,
+      tables: true
     }
     markdown_to_html = Redcarpet::Markdown.new(coderayified, options)
     markdown_to_html.render(text).html_safe
