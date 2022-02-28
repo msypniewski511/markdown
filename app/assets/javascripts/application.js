@@ -15,3 +15,14 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+document.addEventListener("turbolinks:load", () => {
+//   alert("page has loaded! - turbolinks -load ");
+  var burger = document.querySelector('.burger');
+  // var menu = document.querySelector('#' + burger.dataset.target);
+  var menu = document.getElementById('navbar');
+  burger.addEventListener('click', function () {
+    burger.classList.toggle('is-active');
+    menu.classList.toggle('is-active');
+  });
+});
