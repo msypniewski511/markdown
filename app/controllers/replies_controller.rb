@@ -21,6 +21,7 @@ class RepliesController < ApplicationController
   def edit
   end
 
+
   # POST /replies or /replies.json
   def create
     @reply = @discussion.replies.create(reply_params)
@@ -64,11 +65,11 @@ class RepliesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_discussion
-      @discussion = Discussion.find(params[:discussion_id])
+      @discussion = Discussion.friendly.find(params[:discussion_id])
     end
 
     def set_reply
-      @reply = Reply.find(params[:id])
+      @reply = Reply.friendly.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

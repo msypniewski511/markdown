@@ -63,7 +63,7 @@ class DiscussionsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_discussion
-      @discussion = Discussion.find(params[:id])
+      @discussion = Discussion.friendly.find(params[:id])
     end
 
     def set_channels

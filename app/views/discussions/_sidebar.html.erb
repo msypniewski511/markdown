@@ -6,6 +6,7 @@
     <% end %>
   </ul>
 
-  <!-- admin role -->
-  <%= link_to 'New Topic/Channel', new_channel_path, class: 'button is-info pt-1' %>
+  <% if has_role?(:admin) %>
+    <%= link_to 'New Topic/Channel', new_channel_path, class: 'button is-info pt-1' %>
+  <% end %>
 </div>

@@ -1,18 +1,20 @@
 <div class="columns">
   <div class="column is-8">
     <h1 class="title is-2 has-text-grey discussion-title"><%= @discussion.title %></h1>
-    <h3 class="subtitle is-5 has-text-grey-lighter">by <%= @discussion.user.username %></h3>
+    <h3 class="subtitle is-5 has-text-grey-lighter">by <%= @discussion.user.username %> in <%= link_to @discussion.channel.channel, @discussion.channel %></h3>
     <%#= gravatar_image_tag(@discussion.user.email, class: 'border-radius-50', size: 40, alt: @discussion.user.username) %>
     <div class="level">
       <div class="level-left"></div>
       <div class="level-right">
+      <% if discussion_author(@discussion) || has_role?(:admin)  %>
         <div class="buttons">
           <%=  link_to 'Edit', edit_discussion_path(@discussion), class: 'button' %>
           <%=  link_to 'Delete', @discussion, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button' %>
         </div>
+      <% end %>
       </div>
     </div>
-    <div class="content"><%= (@discussion.content).html_safe %></div>
+    <div class="content"><%= markdown(@discussion.content) %></div>
 
     <h2 class="subtitle is-5 has-text-grey"><%= @discussion.replies.count %> Replies</h2>
 
