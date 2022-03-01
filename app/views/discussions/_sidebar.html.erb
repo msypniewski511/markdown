@@ -1,4 +1,4 @@
-<div class="column is-3 is-offset-1">
+
   <h3 class="title is-5 has-text-grey-light">Topics/Channels</h3>
   <ul class="list">
     <% @channels.each do |c| %>
@@ -9,4 +9,3 @@
   <% if has_role?(:admin) %>
     <%= link_to 'New Topic/Channel', new_channel_path, class: 'button is-info pt-1' %>
   <% end %>
-</div>

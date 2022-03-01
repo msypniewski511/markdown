@@ -16,12 +16,21 @@
 
 @import "bulma";
 @import "functions";
-
+// @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
 .image {
   border-radius: 50%;
   img {
     border-radius: 50%;
   }
+}
+
+body {
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  // font-size: 18px;
+  line-height: 32px;
+  font-weight: 300;
+  color: #4a5d85;
+  margin-bottom: 24px;
 }
 
 .notification:not(:last-child) {
@@ -57,4 +66,18 @@ table {
   tr:nth-child(2n){
     background-color: #f6f8fa;
   }
+}
+
+
+.content pre {
+  // background-color: #1f2330 !important;
+  color: rgb(7, 156, 156);
+  border-radius: 5px;
+  margin: .5rem 0;
+}
+
+.toc_text {
+  position: sticky;
+  top: 2rem;
+  margin-top: 1rem;
 }
