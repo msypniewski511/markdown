@@ -80,4 +80,10 @@ table {
   position: sticky;
   top: 2rem;
   margin-top: 1rem;
+  ul {
+    padding-left:0;
+    ul {
+      padding-left: 1rem;
+    }
+  }
 }
