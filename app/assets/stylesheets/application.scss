@@ -17,6 +17,19 @@
 @import "bulma";
 @import "functions";
 // @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+
+// ------------------------------------------------------------------------------------------------//
+// TODO niewiwm dlaczego nie bierze z bulmy
+// =================================================================================================
+.message-body {
+  border-color: #dbdbdb;
+  border-radius: 0.375em;
+  border-style: solid;
+  border-width: 0 0 0 4px;
+  color: #4a4a4a;
+  padding: 1.25em 1.5em;
+}
+
 .image {
   border-radius: 50%;
   img {
