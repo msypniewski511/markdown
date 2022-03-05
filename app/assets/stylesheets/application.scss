@@ -16,6 +16,7 @@
 
 @import "bulma";
 @import "functions";
+
 // @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
 
 // ------------------------------------------------------------------------------------------------//
@@ -44,6 +45,8 @@ body {
   font-weight: 300;
   color: #4a5d85;
   margin-bottom: 24px;
+
+  scroll-behavior: smooth;
 }
 
 .notification:not(:last-child) {
@@ -51,7 +54,7 @@ body {
 }
 
 .textarea {
-  height: 250px;
+  height: 100vh;
   font-family: Monaca, san-serif;
   font-size: .9rem;
   padding: 1rem;
@@ -71,6 +74,14 @@ h4 {
 .pt-5 {
    margin-top: 5rem;
 }
+
+// ---------------------------------------//
+// Margins 
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+
 .red {
   color: red;
 }
@@ -82,11 +93,14 @@ table {
 }
 
 
-.content pre {
-  // background-color: #1f2330 !important;
-  color: rgb(7, 156, 156);
-  border-radius: 5px;
-  margin: .5rem 0;
+.content {
+  
+  pre {
+    // background-color: #1f2330 !important;
+    color: rgb(7, 156, 156);
+    border-radius: 5px;
+    margin: .5rem 0;
+  }
 }
 
 .toc_text {
@@ -96,7 +110,18 @@ table {
   ul {
     padding-left:0;
     ul {
-      padding-left: 1rem;
+      // padding-left: 1rem;
+      li {
+        padding-left: 1rem;
+        border-left: #dbdbdb 1px solid;
+      }
     }
   }
+}
+
+mark {
+  background-color: hsl(171, 100%, 96%);
+  color: hsl(141, 71%, 48%);
+  padding: 0.3rem;
+  font-weight: bold;
 }

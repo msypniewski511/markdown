@@ -1,11 +1,14 @@
 
+<div class='box'>  
   <h3 class="title is-5 has-text-grey-light">Topics/Channels</h3>
+  <hr />
   <ul class="list">
     <% @channels.each do |c| %>
-      <li><%= link_to c.channel, c %></li>
+      <li><strong><%= link_to c.channel, c %></strong></li>
     <% end %>
   </ul>
 
   <% if has_role?(:admin) %>
-    <%= link_to 'New Topic/Channel', new_channel_path, class: 'button is-info pt-1' %>
+    <%= link_to 'New Topic/Channel', new_channel_path, class: 'button is-info is-outlined pt-1' %>
   <% end %>
+</div>

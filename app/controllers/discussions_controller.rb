@@ -67,7 +67,7 @@ class DiscussionsController < ApplicationController
     end
 
     def set_channels
-      @channels = Channel.all.order('created_at desc')
+      @channels = Channel.all.order('channel')
     end
 
     # Only allow a list of trusted parameters through.

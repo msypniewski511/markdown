@@ -3,14 +3,14 @@ class ChannelsController < ApplicationController
 
   # GET /channels or /channels.json
   def index
-    @channels = Channel.all
+    @channels = Channel.order('channel')
     @discussions = Discussion.all
   end
 
   # GET /channels/1 or /channels/1.json
   def show
     @discussions = @channel.discussions
-    @channels = Channel.all
+    @channels = Channel.order('channel')
   end
 
   # GET /channels/new

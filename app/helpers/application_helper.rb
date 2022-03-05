@@ -75,7 +75,8 @@ module ApplicationHelper
   end
 
   def get_toc(text)
-    output = ["<div class='toc_text'>", "<h3 class='title is-5 has-text-grey-light discussion-title'>Table of Content</h3>"]
+    # output = ["<div class='toc_text'>", "<h3 class='title is-5 has-text-grey-light discussion-title'>Table of Content</h3>"]
+    output = [ ]
     content = text
     unsafe_chars_regex = /[ $&+,\/:;=?@\"<>#%{}|\^~\[\]`]+/o
 
@@ -92,7 +93,7 @@ module ApplicationHelper
       "<a href=\"#{link_url}##{fixed_anchor}\">"
     end
     # tmp_toc_wrap = "<div class='toc_text'>"
-    output << toc_text << "</div>"
+    output << toc_text
     output.join('').html_safe
   end
 end

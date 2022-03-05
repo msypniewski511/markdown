@@ -12,20 +12,12 @@
   </head>
   
   <body>
-    <% if flash[:notice] %>
-      <div class="notification is-success global-notification">
-        <p class="notice"><%= notice %></p>
-      </div>
-    <% end %>
-    <% if flash[:alert] %>
-    <div class="notification is-danger global-notification">
-      <p class="alert"><%= alert %></p>
-    </div>
-    <% end %>
-     <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+    <div class="container">
+     <nav class="navbar" role="navigation" aria-label="main navigation">
+
       <div class="navbar-brand">
         <%= link_to root_path, class:"navbar-item" do %>
-          <h1 class="title is-5">Knowlwdge base</h1>
+          <h1 class="title is-5">Knowledge Base</h1>
         <% end  %>
         <div class="navbar-burger burger" data-target="navbar">
           <span></span>
@@ -39,7 +31,7 @@
           <% if user_signed_in? %>
             <div class="navbar-item">
               <div class="field is-grouped">
-                <%= link_to 'New Discussion', new_discussion_path, class:"button is-info" %>
+                <%= link_to 'New Discussion', new_discussion_path, class:"button is-info is-outlined" %>
               </div>
             </div>
             <div class="navbar-item has-dropdown is-hoverable">
@@ -53,7 +45,7 @@
             <div class="navbar-item">
               <div class="field is-grouped">
                 <p class="control">
-                  <%= link_to 'New Discussion', new_discussion_path, class:"button is-info" %>
+                  <%= link_to 'New Discussion', new_discussion_path, class: "button has-text-info" %>
                 </p>
                 <p class="control">
                   <%= link_to "Sign In", new_user_session_path, class: "button is-light"%>
@@ -67,12 +59,24 @@
         </div>
       </div>
     </nav>
+    </div>
+
+    <% if flash[:notice] %>
+      <div class="notification is-success global-notification">
+        <p class="notice"><%= notice %></p>
+      </div>
+    <% end %>
+    <% if flash[:alert] %>
+      <div class="notification is-danger global-notification">
+        <p class="alert"><%= alert %></p>
+      </div>
+    <% end %>
 
     <section class="section">
       <div class="container">
         <%= yield %>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
       </div>
     </section>
-
   </body>
 </html>
