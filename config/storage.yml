@@ -16,10 +16,12 @@ local:
 
 # Remember not to checkin your GCS keyfile to a repository
 google:
-  service: GCS
-  project: moj-linux
-  credentials: <%= ENV["GOOGLE_APPLICATION_CREDENTIALS"].as_json %>
-  bucket: your_own_bucket
+  service: Disk
+  root: <%= Rails.root.join("storage") %>
+  # service: GCS
+  # project: moj-linux
+  # credentials: <%= ENV["GOOGLE_APPLICATION_CREDENTIALS"].as_json %>
+  # bucket: your_own_bucket
   # service: GCS
   # credentials:
   #   type: "service_account"
