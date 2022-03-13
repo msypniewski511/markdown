@@ -7,7 +7,7 @@ class DiscussionsController < ApplicationController
   def index
     @discussions = Discussion.order('created_at desc')
     puts '-------------------------------------------------'
-    puts Rails.application.credentials.dig(:gcs, :private_key_id)
+    puts Rails.application.credentials.gcskey.to_json
     puts '-------------------------------------------------'
   end
 
