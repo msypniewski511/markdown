@@ -6,6 +6,9 @@ class DiscussionsController < ApplicationController
   # GET /discussions or /discussions.json
   def index
     @discussions = Discussion.order('created_at desc')
+    puts '-------------------------------------------------'
+    puts Rails.application.credentials.dig(:gcs, :private_key_id)
+    puts '-------------------------------------------------'
   end
 
   # GET /discussions/1 or /discussions/1.json
@@ -72,6 +75,6 @@ class DiscussionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def discussion_params
-      params.require(:discussion).permit(:title, :content, :channel_id)
+      params.require(:discussion).permit(:title, :content, :channel_id, :main_picture)
     end
 end
