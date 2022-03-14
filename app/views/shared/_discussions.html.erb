@@ -6,7 +6,7 @@
       <div class="columns bb-not-last pv10">
         <div class="column is-1 is-align-items-center">
           <% if discussion.main_picture.attached? %>
-            <%= image_tag discussion.main_picture.variant(resize: '700x700').processed.service_url %>
+            <%= image_tag discussion.main_picture %>
           <% else %>
             <%= gravatar_image_tag(discussion.user.email, class: 'border-radius-50', size: 48, alt: discussion.user.username) %>
           <% end %>
