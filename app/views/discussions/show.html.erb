@@ -9,7 +9,7 @@
 <div class="columns">
   <div class="column is-8">
     <% if @discussion.main_picture.attached? %>
-      <%= image_tag @discussion.main_picture, style: 'width: -webkit-fill-available;' %>
+      <%= image_tag @discussion.main_picture, style: 'width: -webkit-fill-available;', class: 'main_picture' %>
     <% end %>
     <h1 class="title is-2 has-text-grey discussion-title"><%= @discussion.title %></h1>
     <h3 class="subtitle is-5 has-text-grey-lighter">by <%= @discussion.user.username %> in <%= link_to @discussion.channel.channel, @discussion.channel %></h3>
@@ -39,8 +39,8 @@
     <% if user_signed_in? %>
       <%=render 'replies/form' %>
     <% else %>
-      <p>To replay you need to <%= link_to 'login', new_user_session_path %>. Don't have an account?
-        <%= link_to 'Sign up', new_user_registration_path %> for one.
+      <p>To replay you need to <%= link_to 'login', new_user_session_path, class: 'button has-text-info sketch-button' %>. Don't have an account?
+        <%= link_to 'Sign up', new_user_registration_path, class: 'button has-text-info sketch-button' %> for one.
       </p>
     <% end %>
     

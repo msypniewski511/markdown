@@ -45,13 +45,13 @@
             <div class="navbar-item">
               <div class="field is-grouped">
                 <p class="control">
-                  <%= link_to 'New Discussion', new_discussion_path, class: "button has-text-info" %>
+                  <%= link_to 'New Discussion', new_discussion_path, class: "button is-dark is-outlined has-text-grey sketch-button", style: 'border-color: #fff;' %>
                 </p>
                 <p class="control">
-                  <%= link_to "Sign In", new_user_session_path, class: "button is-light"%>
+                  <%= link_to "Sign In", new_user_session_path, class: "button has-text-info sketch-button"%>
                 </p>
                 <p class="control">
-                  <%= link_to "Sign up", new_user_registration_path, class: "button is-light" %>
+                  <%= link_to "Sign up", new_user_registration_path, class: "button has-text-info sketch-button" %>
                 </p>
               </div>
             </div>
@@ -75,7 +75,9 @@
     <section class="section">
       <div class="container">
         <%= yield %>
-        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+        <button onclick="topFunction()" id="myBtn" class="sketch-button" title="Go to top">
+          Top <i class="fa fa-angle-up" aria-hidden="true"></i>
+        </button>
       </div>
     </section>
   </body>
