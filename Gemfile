@@ -1,26 +1,26 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.0'
+ruby '3.1.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.0'
+gem 'rails', '~> 6'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2'
+gem 'coffee-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
+gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
+gem 'jbuilder'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -34,19 +34,19 @@ gem 'dotenv-rails', groups: [:development, :test]
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'bulma-rails', '~> 0.6.2'
+gem 'bulma-rails'
 gem 'simple_form'
-gem 'devise', '~> 4.4', '>= 4.4.1'
-gem 'gravatar_image_tag', '~> 1.2'
-gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
-gem 'rolify', '~> 5.2'
-gem 'cancancan', '~> 2.1', '>= 2.1.3'
-gem 'friendly_id', '~> 5.2', '>= 5.2.3'
-gem 'redcarpet', '~> 3.4'
-gem 'coderay', '~> 1.1', '>= 1.1.2'
+gem 'devise'
+gem 'gravatar_image_tag'
+gem 'jquery-rails'
+gem 'rolify'
+gem 'cancancan'
+gem 'friendly_id'
+gem 'redcarpet'
+gem 'coderay'
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootsnap', require: false
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
