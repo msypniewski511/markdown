@@ -33,3 +33,5 @@
 /config/credentials.yml.enc
 
 .rbenv-vars
+
+config/database.yml
