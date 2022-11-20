@@ -84,3 +84,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
 gem "bcrypt_pbkdf", "~> 1.1"
+gem 'net-smtp'
