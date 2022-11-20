@@ -6,7 +6,7 @@
         <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 <%= number_to_human_size @discussion.main_picture.byte_size %>
 <%= @discussion.main_picture.representable? %>
-<%= @discussion.main_picture.metadata['height'] %>
+<%= @discussion.main_picture.metadata %>
         <div class="field">
           <div class="control">
             <%= f.input :title, required: true, input_html:  { class: 'input' }, wrapper: false, label_html: { class: 'label' } %>
