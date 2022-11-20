@@ -1,0 +1,61 @@
+<label class="file-label is-fullwidt is-block is-flex">
+  <input class="file-input" type="file" name="main_picture">
+  
+  <span class="file-cta is-larg button-center-down">
+    <span class="file-icon">
+      <i class="fas fa-cloud-upload-alt"></i>
+    </span>
+    <span class="file-label">
+      Change picture…
+    </span>
+  </span>
+  <%= (image_tag(@discussion.main_picture, class: "has-ratio", style: "width: 100%")) %>
+  <span class="file-name">
+    <%= number_to_human_size @discussion.main_picture.byte_size %>
+  </span>
+</label>
+
+<%# <div class="file has-name is-info">
+  <label class="file-label">
+    <input class="file-input" type="file" name="main_picture">
+    <span class="file-cta">
+      <span class="file-icon">
+        <i class="fas fa-cloud-upload-alt"></i>
+      </span>
+      <span class="file-label">
+        Main picture…
+      </span>
+    </span>
+    <div class="bulma-center-mixin-parent">
+    </div>
+    <span class="file-name">
+    </span>
+  </label>
+</div> %>
+
+<%# <div class="field is-grouped">
+  <p class="control">
+    <button class="button is-link">
+      Save changes
+    </button>
+  </p>
+  <p class="control">
+    <button class="button">
+      Cancel
+    </button>
+  </p>
+  <p class="control">
+    <button class="button is-danger">
+      Delete post
+    </button>
+  </p>
+</div>
+<div class="buttons">
+  <button class="button is-success">Save changes</button>
+  <button class="button is-info">Save and continue</button>
+  <button class="button is-danger">Cancel</button>
+</div>
+
+<figure class="image is-16by9">
+  <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/YE7VzlLtp-4" frameborder="0" allowfullscreen></iframe>
+</figure> %>

@@ -67,7 +67,6 @@ module ApplicationHelper
     #   "<h#{header_level} id=\"#{fixed_anchor}\""
     # end
 
-
     output = []
     output << markdown_1(text)
 

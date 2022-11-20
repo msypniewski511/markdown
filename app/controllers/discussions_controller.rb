@@ -1,6 +1,6 @@
 class DiscussionsController < ApplicationController
   before_action :set_discussion, only: %i[ show edit update destroy ]
-  before_action :set_channels, only: %i[index show new edit create]
+  before_action :set_channels, only: %i[index show new edit create update]
   before_action :authenticate_user!, except: [:index, :show]
 
   # GET /discussions or /discussions.json
@@ -47,6 +47,7 @@ class DiscussionsController < ApplicationController
         format.html { redirect_to discussion_url(@discussion), notice: "Discussion was successfully updated." }
         format.json { render :show, status: :ok, location: @discussion }
       else
+        # format.html { render :edit,  }
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @discussion.errors, status: :unprocessable_entity }
       end

@@ -69,6 +69,8 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 
   gem 'ed25519', '~> 1.2', '>= 1.2.4'
+  gem "better_errors"
+  gem "binding_of_caller"
 
 end
 
@@ -83,7 +85,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "bcrypt_pbkdf", "~> 1.1"
 gem 'net-smtp'
 
-  gem 'capistrano', '~> 3.11'
-  gem 'capistrano-rails', '~> 1.4'
-  gem 'capistrano-passenger', '~> 0.2.0'
-  gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
+gem 'capistrano', '~> 3.11'
+gem 'capistrano-rails', '~> 1.4'
+gem 'capistrano-passenger', '~> 0.2.0'
+gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
