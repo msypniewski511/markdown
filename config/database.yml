@@ -26,6 +26,6 @@ production:
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  database: knowledge_production
-  username: knowledge
+  database: knowledge
+  username: deploy
   password: <%= ENV['KNOWLEDGE_DATABASE_PASSWORD'] %>
