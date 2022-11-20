@@ -31,3 +31,5 @@
 /config/secrets/*
 .env
 /config/credentials.yml.enc
+
+.rbenv-vars
