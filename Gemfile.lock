@@ -65,6 +65,7 @@ GEM
     airbrussh (1.4.1)
       sshkit (>= 1.6.1, != 1.7.0)
     bcrypt (3.1.18)
+    bcrypt_pbkdf (1.1.0)
     bindex (0.8.1)
     bootsnap (1.14.0)
       msgpack (~> 1.2)
@@ -350,6 +351,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  bcrypt_pbkdf (~> 1.1)
   bootsnap
   bulma-rails
   byebug
